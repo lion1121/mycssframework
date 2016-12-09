@@ -1,0 +1,55 @@
+@mixin container-width($width, $container-padding) {
+  display: block;
+  width: $width;
+  margin: auto;
+  box-sizing: border-box;
+  padding: $container-padding;
+
+}
+
+@mixin vertical-align-inline {
+  display: table;
+  & > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+@mixin vertical-align-block {
+  position: relative;
+  resize: vertical;
+  overflow: auto;
+  & > div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin column($column-padding) {
+  box-sizing: border-box;
+  float: left;
+  padding: $column-padding;
+}
+
+@mixin color-link($colorlink){
+  color: $colorlink;
+    &:link {
+      text-decoration: none;
+      color: $colorlink;
+    }
+    &:visited {
+      text-decoration: none;
+      color: $colorlink;
+    }
+}

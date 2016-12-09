@@ -1,0 +1,20 @@
+@media screen and (max-width: 1920px) and (min-width: 1200px){
+  .container {
+    @include container-width($container-width-lg, $container-padding);
+  }
+}
+@media screen and (max-width: 1200px){
+  .container {
+    @include container-width($container-width-md, $container-padding);
+  }
+}
+@media screen and (max-width: 1024px){
+  .container {
+    @include container-width($container-width-sm, $container-padding);
+  }
+}
+@media screen and (max-width: 767px){
+  .container {
+    @include container-width($container-width-xs, $container-padding);
+  }
+}
